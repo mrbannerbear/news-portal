@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/f49b128aef.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .playfair{
+            font-family: 'Playfair Display', serif;
+        }
+        .text-grey{
+            color: #858585;
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#f2ecec] min-h-screen px-14 font-[mukta]">
+    
+    <nav class="mb-5">
+
+        <!-- Nav -->
+        <section class="navbar bg-base-100 bg-transparent text-[12px] text-grey font-medium border-b border-[#CDCDCD]">
+            <div class="flex-1">
+              <button class="btn btn-link playfair no-underline active:no-underline hover:no-underline normal-case text-xl focus:ring-0">
+                <span class="bg-blue-500 rounded-sm py-1 px-2 text-[#F6F6F6]">News</span>Portal
+            </button>
+            </div>
+            <div class="flex-none gap-8">
+                <div class="flex gap-6">
+                    <button class="btn btn-sm text-xs text-grey hover:text-blue-500 focus:ring-0 hover:bg-blue-200 active:bg-blue-400">News</button>
+                    <button class="btn btn-sm text-xs text-grey hover:text-blue-500 focus:ring-0 hover:bg-blue-200 active:bg-blue-400">Blog</button>
+                </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="images.jfif" />
+                  </div>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section id="menu-section" class="flex justify-between mt-4">
+        </section>
+
+    </nav>
+
+    <main class="pb-12">
+
+        <!-- Items Found -->
+            <section  id="items-found-section" class="bg-[#F6F6F6] p-3 rounded-sm mb-3 hidden">
+                <span id="items-found-number"></span> items found for category <span id="items-found-category"></span>
+            </section>
+
+        <!-- News Cards -->
+            <section class="flex justify-between mb-7">
+
+                <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="btn btn-sm text-sm focus:ring-0 hover:bg-blue-300 hover:text-blue-500">Sort By</label>
+                        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Newest</a></li>
+                        <li><a>Views</a></li>
+                        <li><a>Ratings</a></li>
+                        </ul>
+                </div>
+
+                <div class="flex gap-5">
+                    <button class="btn btn-sm bg-blue-500 text-[#F6F6F6] focus:ring-0 hover:bg-blue-300 rounded-sm">Today's Pick</button>
+                    <button class="btn btn-sm bg-transparent text-blue-500 border-blue-500 focus:ring-0 hover:bg-blue-300 rounded-sm">Trending</button>
+                </div>
+
+            </section>
+
+            <section id="news-section">
+
+            </section>
+
+                <dialog id="my_modal_3" class="modal">
+                    <form method="dialog" class="modal-box" id="modal-box">
+                    
+                    </form>
+                </dialog>
+
+    </main>
+
+    <footer class="text-center text-sm text-grey">
+        Copyright 2023 News Portal
+    </footer>
+
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
